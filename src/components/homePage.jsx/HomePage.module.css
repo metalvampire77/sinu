@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+
+.main{
+    background-image: url('/Users/mallireddybalaramireddy/Desktop/projects/sinu/src/assets/backgroundImg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 95%;
+    width: 95%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: bisque; */
+} 
+
+.img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    /* border: 5px solid black; */
+    cursor: pointer;
+}
+
+.nav{
+    width: 60%;
+    padding: 5px 1px;
+    color: aliceblue;
+}
+
+.list{
+    border-radius: 10px;
+    padding: 18px 10px;
+    background-color: #21373E;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content{
+    background: whitesmoke;
+    height: 45%;
+    width: 50%;
+    margin: 10% 25%;
+    display: flex;
+}
+
+.since{
+    font-size: 15px;
+}
+
+.companyName{
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.quote{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    background-color: #21373E;
+    color: aliceblue;
+}
+
