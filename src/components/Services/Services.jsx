@@ -42,7 +42,7 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <h2 className="projects-heading">Projects</h2>
+      <h2 className="projects-heading">Services</h2>
       <div className="services-container">
         {projects.map((project, index) => (
           <div className="card" key={index}>

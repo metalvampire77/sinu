@@ -1,11 +1,12 @@
 /* Services.css */
 
 .services-page {
-  height: 80vh;
+  height: 120vh;
   display: flex;
   flex-direction: column; /* Ensure it's a column layout */
   align-items: center;
   justify-content: center;
+  background-color: aliceblue;
 }
 
 .projects-heading {
@@ -15,14 +16,14 @@
 
 .services-container {
   width: 90%;
-  max-height: 70vh; /* Adjust the maximum height as needed */
+  max-height: 90vh; /* Adjust the maximum height as needed */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
 .card {
-  width: 30%; /* Adjust width as needed */
+  width: 20%; /* Adjust width as needed */
   margin-bottom: 20px;
   border: 2px solid grey;
   border-radius: 15px;
@@ -32,7 +33,6 @@ img {
   width: 100%;
   height: auto;
   border-radius: 15px 15px 0 0;
-  
 }
 
 .card-content {
