@@ -1,3 +1,5 @@
+// ContactUs.js
+
 import React, { useState } from "react";
 import "./ContactUs.css";
 
@@ -5,8 +7,8 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    mobileNumber: "",
-    reasonToContact: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -14,10 +16,26 @@ const ContactUs = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add your logic here to handle form submission, e.g., send the data to the server.
-    console.log("Form Data:", formData);
+
+    try {
+      const response = await fetch("http://localhost:8000/email/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Email sent successfully");
+      } else {
+        console.error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -47,9 +65,9 @@ const ContactUs = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="mobileNumber">Mobile Number:</label>
+          <label htmlFor="mobileNumber">subject:</label>
           <input
-            type="tel"
+            type="text"
             id="mobileNumber"
             name="mobileNumber"
             pattern="[0-9]{10}"
@@ -59,7 +77,7 @@ const ContactUs = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="reasonToContact">Reason to Contact:</label>
+          <label htmlFor="reasonToContact">Message:</label>
           <textarea
             id="reasonToContact"
             name="reasonToContact"
